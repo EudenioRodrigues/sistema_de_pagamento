@@ -63,15 +63,21 @@ public class Cartao extends InfoPagamentos {
     @Override
     public void processarPagamento(double valor) {
         System.out.println("Processando pagamento via CARTÃO no valor de R$" + valor);
+        System.out.println("Número do Cartão: **** **** **** " + numeroCartao.substring(12));
     }
 
     @Override
     public void gerarRecibo() {
-        System.out.println("Gerando recibo para pagamento via Cartão.");
+        System.out.println("=== RECIBO DE PAGAMENTO VIA CARTÃO ===");
+        System.out.println("Titular: " + nomeTitular);
+        System.out.println("Número do Cartão: **** **** **** " + numeroCartao.substring(12));
+        System.out.println("Validade: " + validade);
+        System.out.println("Valor: R$" + getValor());
+        System.out.println("=====================================");
     }
 
     @Override
     public void cancelarPagamento() {
-        System.out.println("Cancelando pagamento via Cartão.");
+        System.out.println("Pagamento via CARTÃO cancelado.");
     }
 }

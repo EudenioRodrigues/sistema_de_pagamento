@@ -21,15 +21,20 @@ public class Boleto extends InfoPagamentos {
     @Override
     public void processarPagamento(double valor) {
         System.out.println("Processando pagamento via BOLETO no valor de R$" + valor);
+        System.out.println("Código de Barras: " + codigoBarras);
     }
-
+    
     @Override
     public void gerarRecibo() {
-        System.out.println("Gerando recibo para pagamento via Boleto.");
+        System.out.println("=== RECIBO DE PAGAMENTO VIA BOLETO ===");
+        System.out.println("Código de Barras: " + codigoBarras);
+        System.out.println("Cliente: " + getCliente().getNome());
+        System.out.println("Valor: R$" + getValor());
+        System.out.println("======================================");
     }
-
+    
     @Override
     public void cancelarPagamento() {
-        System.out.println("Cancelando pagamento via Boleto.");
+        System.out.println("Pagamento via BOLETO cancelado.");
     }
 }
