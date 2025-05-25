@@ -1,1 +1,1 @@
-https://imgur.com/a/2Uu1BQW
+![Diagrama UML](https://i.imgur.com/4WHOfdD.png)
